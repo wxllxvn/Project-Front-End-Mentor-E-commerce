@@ -101,7 +101,7 @@ main{
 
 main section{
     display: flex;
-    width: 200px;
+    width: 50%;
 
 }
 
@@ -113,6 +113,62 @@ main section.product-imagens img{
     width: 10px;
 }
 
+
+.container-describe{
+    display: flex;
+    flex-direction: column;
+    padding: 75px;
+}
+
+.container-describe #orange-title{
+    color: var(--orange);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container-describe h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1rem 0 2rem 0;
+}
+
+
+.container-describe #describe-text{
+    font-size: 1.6rem;
+    color: var(--Dark-grayish-blue);
+    text-align: left;
+}
+
+.container-describe .product-values{
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+}
+
+.container-describe .product-values div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.container-describe .product-values p#final-value{
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.container-describe .product-values p#percent-value{
+    font-size: 1.8rem;
+    margin-left: 0.8rem;
+    color: var(--orange);
+    font-weight: 700;
+    background-color: rgba(250, 183, 60, 0.226);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.container-describe .product-values p#old-value{
+    
+}
 
 
 
