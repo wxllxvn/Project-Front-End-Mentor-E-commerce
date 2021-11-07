@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+    --font-main: 'Kumbh Sans', sans-serif;
+    --orange: hsl(26, 100%, 55%)
+    --pale-orange: hsl(25, 100%, 94%)
+
+    --Very-vark-blue: hsl(220, 13%, 13%)
+    --Dark-grayish-blue: hsl(219, 9%, 45%)
+    --Grayish-blue: hsl(220, 14%, 75%)
+    --Light-grayish-blue: hsl(223, 64%, 98%)
+    --White: hsl(0, 0%, 100%)
+    --Black-opacity: hsl(0, 0%, 0%)
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    height: 10rem;
+    padding: 1rem;
+}
+
+#menu-area{
+    display: flex;
+}
+
+header div nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header div nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: ;
+}
+
+
+
+.profile-area img{
+    width: 4.5rem;
+    margin-left: 4rem;
+    
+}
+
+
