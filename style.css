@@ -144,12 +144,14 @@ main section.product-imagens img{
     display: flex;
     flex-direction: column;
     width: 20px;
+    margin: 25px 0 25px 0;
 }
 
 .container-describe .product-values div:first-child{
     display: flex;
     align-items: center;
 }
+
 
 .container-describe .product-values p#final-value{
     font-size: 2.7rem;
@@ -167,8 +169,50 @@ main section.product-imagens img{
 }
 
 .container-describe .product-values p#old-value{
-    
+    font-size: 1.6rem;
+    text-decoration: line-through;
 }
 
 
+.product-buttons{
+    display: flex;
+    height: 50px;
+}
 
+.product-amount{
+    background-color: rgba(184, 184, 184, 0.116);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.product-amount span{
+    font-size: 1.9rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.product-amount span:first-child, .product-amount span:last-child{
+    color: var(--orange);
+}
+
+.add-product-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: var(--orange);
+    height: 100%;
+    width: 20rem;
+    color: #ffffff;
+    border-radius: 7px;
+    margin-left: 12px;
+}
+
+.add-product-cart span{
+    margin-left: 10px;
+}
