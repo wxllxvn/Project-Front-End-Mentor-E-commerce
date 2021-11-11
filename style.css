@@ -75,6 +75,10 @@ header div nav ul li a{
     font-weight: 400;
 }
 
+.final-cart{
+    cursor: pointer;
+}
+
 .profile-area{
     display: flex;
     align-items: center;
@@ -105,13 +109,8 @@ main section{
 
 }
 
-main section.product-imagens{
-    background-color: yellow;
-}
 
-main section.product-imagens img{
-    width: 10px;
-}
+
 
 
 .container-describe{
@@ -197,6 +196,7 @@ main section.product-imagens img{
 
 .product-amount span:first-child, .product-amount span:last-child{
     color: var(--orange);
+    cursor: pointer;
 }
 
 .add-product-cart{
@@ -211,8 +211,43 @@ main section.product-imagens img{
     color: #ffffff;
     border-radius: 7px;
     margin-left: 12px;
+    cursor: pointer;
 }
 
 .add-product-cart span{
     margin-left: 10px;
+}
+
+.product-imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.main-image{
+    width: 65%;
+    height: 65%;
+    background-color: yellow;
+
+}
+
+.main-image img{
+    width: 100% !important;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.secondary-images{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.secondary-images img{
+    width: 75px !important;
+    height: 75px;
+    border-radius: 6px;
 }
