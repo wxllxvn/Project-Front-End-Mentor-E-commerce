@@ -75,7 +75,7 @@ header div nav ul li a{
     font-weight: 400;
 }
 
-.final-cart{
+.final-cart, .profile-area img{
     cursor: pointer;
 }
 
