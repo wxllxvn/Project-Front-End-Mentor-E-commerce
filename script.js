@@ -1,3 +1,6 @@
+
+
+
 class Sneakears {
     constructor(){
         this.removeProductAmount = document.getElementById('remove-amount')
@@ -6,6 +9,8 @@ class Sneakears {
         this.btnCart = document.getElementById("btn-cart")
         this.cartContainer = document.getElementById("cart-container")
         this.btnAddItemCart = document.getElementById("add-product-cart")
+
+
     }
 
     addOrRemoveAmount(){
@@ -44,6 +49,7 @@ class Sneakears {
      </div>
         `
 
+
         return itemCart
     }
 
@@ -51,9 +57,21 @@ class Sneakears {
         this.btnAddItemCart.addEventListener("click", () => {
             this.cartContainer.innerHTML = ""
             this.cartContainer.innerHTML = this.createItemCart(125.00, +this.spanAmount.innerHTML)
+
         })
 
     }
+
+    deleteItemCart(){
+        this.deleteCart = document.getElementById("cart-delete")
+        this.deleteCart.addEventListener("click", () => {
+            console.log("will")
+        })
+    }
+
+
+
+
     
 }
 
@@ -62,3 +80,4 @@ const teste = new Sneakears();
 teste.addOrRemoveAmount()
 teste.openCart()
 teste.addItemCart()
+teste.deleteItemCart()
