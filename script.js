@@ -52,27 +52,30 @@ class Sneakears {
 
         return itemCart
     }
+    
+    deleteCart(){
+        const deleteItemCart = document.getElementById("cart-delete")
+        console.log(deleteItemCart)
+        deleteItemCart.addEventListener("click", ()=>{
+            this.cartContainer.innerHTML = `
+                <h1>cart</h1>
+                <p>Your cart is empty.</p>`
+                this.spanAmount.innerHTML = '0' 
+        })
 
+    }
     addItemCart(){
         this.btnAddItemCart.addEventListener("click", () => {
             this.cartContainer.innerHTML = ""
             this.cartContainer.innerHTML = this.createItemCart(125.00, +this.spanAmount.innerHTML)
-
+            this.deleteCart()
         })
-
-    }
-
-    deleteItemCart(){
-        this.deleteCart = document.getElementById("cart-delete")
-        this.deleteCart.addEventListener("click", () => {
-            console.log("will")
-        })
+        
     }
 
 
 
 
-    
 }
 
 
@@ -80,4 +83,11 @@ const teste = new Sneakears();
 teste.addOrRemoveAmount()
 teste.openCart()
 teste.addItemCart()
-teste.deleteItemCart()
+
+
+
+
+
+
+
+
