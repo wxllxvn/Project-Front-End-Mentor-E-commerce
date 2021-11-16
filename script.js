@@ -9,7 +9,8 @@ class Sneakears {
         this.btnCart = document.getElementById("btn-cart")
         this.cartContainer = document.getElementById("cart-container")
         this.btnAddItemCart = document.getElementById("add-product-cart")
-
+        this.mainImageArea = document.getElementById("main-image")
+        this.mainImages = document.querySelectorAll(".main-image img")
 
     }
 
@@ -73,16 +74,25 @@ class Sneakears {
         
     }
 
+    carroselImages(){
+        console.log(this.mainImages)
+    }
+
 
 
 
 }
 
 
+
+
+
 const teste = new Sneakears();
+
 teste.addOrRemoveAmount()
 teste.openCart()
 teste.addItemCart()
+
 
 
 
