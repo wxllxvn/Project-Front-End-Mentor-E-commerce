@@ -11,6 +11,10 @@ class Sneakears {
         this.btnAddItemCart = document.getElementById("add-product-cart")
         this.mainImageArea = document.getElementById("main-image")
         this.mainImages = document.querySelectorAll(".main-image img")
+        this.secondaryImages= document.querySelectorAll(".secondary-images div")
+        this.maxImages = this.mainImages.length - 1
+        this.indexImages = 0
+        this.productImages = document.getElementById("product-imagens")
 
     }
 
@@ -74,8 +78,33 @@ class Sneakears {
         
     }
 
+    nextImage(){
+        this.secondaryImages[this.indexImages].classList.remove("thumb-select")
+        this.mainImages[this.indexImages].classList.remove("select")
+        if(this.indexImages >= this.maxImages){
+            this.mainImages[this.indexImages].classList.remove("select")
+            this.secondaryImages[this.indexImages].classList.remove("thumb-select")
+            this.indexImages = 0
+            console.log("entrou")
+        }else{
+            this.indexImages++
+        }
+        this.mainImages[this.indexImages].classList.add("select")
+        this.secondaryImages[this.indexImages].classList.add("thumb-select")
+        console.log(this.indexImages)
+    }
+
+
     carroselImages(){
-        console.log(this.mainImages)
+        setInterval(() => {
+            this.nextImage()
+        },2000)
+        
+    }
+
+    
+    maximumScreenProducts(){
+        
     }
 
 
@@ -92,6 +121,8 @@ const teste = new Sneakears();
 teste.addOrRemoveAmount()
 teste.openCart()
 teste.addItemCart()
+window.addEventListener("load", teste.carroselImages())
+
 
 
 

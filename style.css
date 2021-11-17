@@ -223,6 +223,7 @@ main section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 
@@ -244,6 +245,7 @@ main section{
 
 .main-image img.select{
     opacity: 1;
+    transition: all 1s;
 }
 
 .secondary-images{
@@ -278,7 +280,7 @@ main section{
 }
 
 .secondary-images div:nth-child(4){
-    background-image: url(images/image-product-3-thumbnail.jpg);
+    background-image: url(images/image-product-4-thumbnail.jpg);
 }
 
 
@@ -289,6 +291,7 @@ main section{
 .secondary-images div.thumb-select{
     opacity: 0.5;
     border: 2px var(--orange) solid;
+    transition: all 1s;
 }
 
 .active-cart{
