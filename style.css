@@ -30,6 +30,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 
@@ -259,9 +260,6 @@ main section{
     width: 75px;
     height: 75px;
     border-radius: 6px;
-}
-
-.secondary-images div{
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -394,5 +392,115 @@ main section{
     font-weight: 700;
 }
 
+.active-maximum{
+    display: flex !important;
+}
 
+
+#maximum-screen-products{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.616);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-maximum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#maximum-screen-products .maximum-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    
+}
+
+
+.img-max-active{
+    display: none !important;
+}
+
+.secondary-active{
+    opacity: 0.5;
+    border: var(--orange) 2px solid;
+    backface-visibility: visible;
+}
+
+#maximum-screen-products .maximum-main img{
+    display: block;
+    width: 420px;
+    height: 420px;
+    border-radius: 13px;
+}
+
+#close-maximum{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 10px;
+}
+
+#close-maximum svg{
+    cursor: pointer;
+}
+
+#close-maximum path:hover{
+    fill: var(--orange);
+}
+
+.arrows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.maximum-secondary{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    margin-top: 10px;
+}
+
+.maximum-secondary div{
+    width: 75px;
+    height: 75px;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.maximum-secondary div:nth-child(1){
+    background-image: url(images/image-product-1-thumbnail.jpg);
+}
+
+.maximum-secondary div:nth-child(2){
+    background-image: url(images/image-product-2-thumbnail.jpg);
+}
+
+.maximum-secondary div:nth-child(3){
+    background-image: url(images/image-product-3-thumbnail.jpg);
+}
+
+.maximum-secondary div:nth-child(4){
+    background-image: url(images/image-product-4-thumbnail.jpg);
+}
 

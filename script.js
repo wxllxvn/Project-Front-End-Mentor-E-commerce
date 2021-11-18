@@ -14,8 +14,15 @@ class Sneakears {
         this.secondaryImages= document.querySelectorAll(".secondary-images div")
         this.maxImages = this.mainImages.length - 1
         this.indexImages = 0
+        this.indexMaximum = 0
+        this.lenMaximum = this.mainImages.length - 1
         this.productImages = document.getElementById("product-imagens")
-
+        this.maximumScreen = document.getElementById("maximum-screen-products")
+        this.closeMaximum = document.querySelector("#close-maximum svg")
+        this.arrowLeft = document.getElementById("arrow-left")
+        this.arrowRight = document.getElementById("arrow-right")
+        this.maximumImages = document.querySelectorAll("#maximum-images img")
+        this.maximumSecondary = document.querySelectorAll(".maximum-secondary div")
     }
 
     addOrRemoveAmount(){
@@ -85,13 +92,13 @@ class Sneakears {
             this.mainImages[this.indexImages].classList.remove("select")
             this.secondaryImages[this.indexImages].classList.remove("thumb-select")
             this.indexImages = 0
-            console.log("entrou")
+
         }else{
             this.indexImages++
         }
         this.mainImages[this.indexImages].classList.add("select")
         this.secondaryImages[this.indexImages].classList.add("thumb-select")
-        console.log(this.indexImages)
+
     }
 
 
@@ -104,6 +111,42 @@ class Sneakears {
 
     
     maximumScreenProducts(){
+        this.productImages.addEventListener("click", () => {
+            this.maximumScreen.classList.toggle("active-maximum")
+        })
+
+        this.closeMaximum.addEventListener("click", () => {
+            this.maximumScreen.classList.toggle("active-maximum")
+        })
+
+        
+    }
+
+    arrowMaximum(){
+        this.arrowRight.addEventListener("click", () => {
+            console.log(this.indexMaximum)
+            this.maximumImages[this.indexMaximum].classList.add("img-max-active")
+            this.maximumSecondary[this.indexMaximum].classList.remove("secondary-active")
+            this.indexMaximum++
+            if(this.indexMaximum == 4){
+                this.indexMaximum = 0
+
+            }
+            this.maximumSecondary[this.indexMaximum].classList.add("secondary-active")
+            this.maximumImages[this.indexMaximum].classList.remove("img-max-active")
+        })
+
+        this.arrowLeft.addEventListener("click", () => {
+            console.log(this.indexMaximum)
+            this.maximumSecondary[this.indexMaximum].classList.remove("secondary-active")
+            this.maximumImages[this.indexMaximum].classList.add("img-max-active")
+            if (this.indexMaximum == 0){
+                this.indexMaximum = 4
+            }
+            this.indexMaximum = this.indexMaximum - 1
+            this.maximumSecondary[this.indexMaximum].classList.add("secondary-active")
+            this.maximumImages[this.indexMaximum].classList.remove("img-max-active")
+        })
 
     }
 
@@ -121,6 +164,9 @@ const teste = new Sneakears();
 teste.addOrRemoveAmount()
 teste.openCart()
 teste.addItemCart()
+teste.maximumScreenProducts()
+teste.arrowMaximum()
+console.log(teste.maximumSecondary)
 window.addEventListener("load", teste.carroselImages())
 
 
