@@ -79,6 +79,9 @@ class Sneakears {
     addItemCart(){
         this.btnAddItemCart.addEventListener("click", () => {
             this.cartContainer.innerHTML = ""
+            if(this.spanAmount.innerHTML == "0"){
+                this.spanAmount.innerHTML = "1"
+            }
             this.cartContainer.innerHTML = this.createItemCart(125.00, +this.spanAmount.innerHTML)
             this.deleteCart()
         })
